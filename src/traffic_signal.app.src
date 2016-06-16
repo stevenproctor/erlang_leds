@@ -1,0 +1,27 @@
+{application, traffic_signal,
+ [{description, "An OTP application"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {mod, { traffic_signal_app, []}},
+  {applications,
+   [kernel,
+    stdlib
+   ]},
+  {env,[{pins, [{green_pin, 17}
+               ,{yellow_pin, 23}
+               ,{red_pin, 25}
+               ,{pin4, 27}
+               ,{pin5, 22}
+               ,{pin6, 6}
+               ,{pin7, 12}
+               ,{pin8, 13}
+               ,{pin9, 16}
+               ,{pin10, 26}
+               ]
+        }]},
+  {modules, [traffic_signal_sup, traffic_signal_light]},
+
+  {maintainers, []},
+  {licenses, []},
+  {links, []}
+ ]}.
